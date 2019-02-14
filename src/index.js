@@ -218,6 +218,12 @@ module.exports = function (connect) {
 
       try {
         s = {_id: this.computeStorageId(sid), session: this.transformFunctions.serialize(session)}
+        if(session.idx)
+          s.idx = session.idx
+        if(session.secret)
+          s.secret = session.secret
+        if(session.src)
+          s.src = session.src
       } catch (err) {
         return callback(err)
       }
