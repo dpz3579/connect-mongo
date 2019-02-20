@@ -220,8 +220,8 @@ module.exports = function (connect) {
         s = {_id: this.computeStorageId(sid), session: this.transformFunctions.serialize(session)}
         if(session.idx)
           s.idx = session.idx
-        if(session.secret)
-          s.secret = session.secret
+        if(session.uuid)
+          s.uuid = session.uuid
         if(session.src)
           s.src = session.src
       } catch (err) {
