@@ -224,6 +224,8 @@ module.exports = function (connect) {
           s.uuid = session.uuid
         if(session.src)
           s.src = session.src
+        if(session.prod)
+          s.prod = session.prod
       } catch (err) {
         return callback(err)
       }
